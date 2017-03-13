@@ -1,0 +1,137 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+
+
+
+
+/// Respond to media query
+/// @author Rhys Williams
+/// @param {Map} $breakpoint - min breakpoint
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+/// Respond to media query (max)
+/// @author Rhys Williams
+/// @param {Map} $breakpoint - max breakpoint
+@mixin respond-to-max($breakpoint) {
+  @if map-has-key($breakpoints-max, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints-max, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+
+
+
+/// Responsive Background – Medium
+/// @author Rhys Williams
+/// @param {String} $image - url of image to use
+@mixin image-medium($image) {
+  @include respond-to(medium) {
+    /* on medium sized screens, use the medium image */
+    background-image: url($image);
+  }
+}
+
+/// Responsive Background – Large
+/// @author Rhys Williams
+/// @param {String} $image - url of image to use
+@mixin image-large($image) {
+  @include respond-to(large) {
+    /* on large sized screens, use the large image */
+    background-image: url($image);
+  }
+}
+
+/// Responsive Background – Retina
+/// @author Rhys Williams
+/// @param {String} $image - url of image to use
+@mixin image-2x($image) {
+  @media (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+  }
+}
+
+/// Responsive Background – Retina Portrait
+/// @author Rhys Williams
+/// @param {String} $image - url of image to use
+@mixin image-portrait-2x($image) {
+  @media (orientation: portrait) and
+         (min-resolution: 1.3dppx) {
+    /* on retina portrait, use image that's scaled by 2 and is portrait */
+    background-image: url($image);
+  }
+}
+
+
+/// Convert px size to rem
+/// @author Rhys Williams
+/// @param {String} $size - size in pixels (include px)
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: rem($size);
+}
+
+///Boring CSS3 properties to work in older browsers
+/// @author/stolen by Emily
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+   -khtml-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+      -ms-#{$property}: #{$value};
+       -o-#{$property}: #{$value};
+          #{$property}: #{$value};
+}
+
+/// Text Shadow
+/// @param {Size} $x [2px] - X
+/// @param {Size} $y [2px] - Y
+/// @param {Size} $blur [2px] - Blur
+/// @param {Color} $color [rgba(0,0,0,.4)] - Color
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    box-shadow: $x $y $blur $color;
+}

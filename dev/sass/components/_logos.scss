@@ -1,0 +1,44 @@
+.logo {
+	@extend .hide-text;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	display: inline-block;
+
+	&.logo--centered {
+		display: block;
+		margin: 0 auto;
+	}
+
+	&.logo--se {
+		width: rem(140px);
+		height: rem(30px);
+		background-image: url('../images/logo-secret-escapes.svg');
+		margin-bottom: 0;
+		margin-left: rem(60px);
+
+		@media screen and (min-width: 40em) {
+			width: rem(220px);
+			height: rem(40px);
+			margin-bottom: 0;
+			margin-left: rem(50px);
+		}
+
+		@media screen and (min-width: 64em) {
+			margin-left: 0;
+		}
+
+	}
+
+	&.logo--volvo {
+		width: rem(40px);
+		height: rem(40px);
+		float: right;
+		background-image: url('../images/logo-volvo.png');
+
+		@media screen and (min-width: 40em) {
+			width: rem(62px);
+			height: rem(62px);
+		}
+	}
+}

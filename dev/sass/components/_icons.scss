@@ -1,0 +1,20 @@
+.social {
+	display: inline-block;
+	height: rem(35px);
+	width: rem(35px);
+	overflow: hidden;
+	text-indent: 9999px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.social--facebook {
+	@extend .social;
+	background-image: url('../images/icon-facebook.svg');
+}
+
+.social--twitter {
+	@extend .social;
+	background-image: url('../images/icon-twitter.svg');
+}

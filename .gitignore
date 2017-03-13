@@ -1,0 +1,11 @@
+_site
+.sass-cache
+.jekyll-metadata
+.DS_Store
+/node_modules
+/vendor
+/Gemfile
+/Gemfile.lock
+/_PHP
+/app/images/.DS_Store
+/app/images/logo-volvo.png

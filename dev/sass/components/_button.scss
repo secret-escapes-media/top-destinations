@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.button, button {
+	background-color: $color-btn-bg;
+	color: $color-btn;
+	font-weight: 600;
+	cursor: pointer;
+	letter-spacing: rem(1.5px);
+	@include fontSize(14px);
+	line-height: rem(21px);
+	text-transform: uppercase;
+	padding: rem(18px) rem(30px);
+	text-decoration: none;
+	transition: color 0.3s ease, background-color 0.3s ease;
+
+	@include on-event {
+		text-decoration: none;
+		background-color: $color-btn-bg-hover;
+		color: $color-btn-hover;
+	}
+
+	&:disabled {
+		opacity: 0.3;
+
+		@include on-event {
+			background-color: $color-btn-bg;
+			color: $color-btn;
+		}
+	}
+
+	&.button--with-icon {
+		position: relative;
+		padding-left: rem(60px);
+
+		@include on-event {
+			&:before {
+				border: 1px solid $color-btn-hover;
+			}
+		}
+
+		&:before {
+			content: '';
+			border: 1px solid $color-btn;
+			border-radius: 50%;
+			padding: rem(10px);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 40%;
+			position: absolute;
+			left: rem(20px);
+			top: 50%;
+			transform: translateY(-50%);
+			transition: border-color 0.2s;
+		}
+	}
+
+	&.button--video {
+		@include on-event {
+			&:before {
+				background-image: url('../images/icon-arrow-right.svg');
+			}
+		}
+
+		&:before {
+			background-image: url('../images/icon-arrow-right.svg');
+			background-position: 60% 50%;
+		}
+	}
+}
+
+.button--cta {
+	background-color: rgba($color-white, 0.2);
+	border: 2px solid $color-white;
+
+	@include on-event {
+		background-color: rgba($color-white, 0.4);
+	}
+}
+
+.button--top-margin {
+	margin-top: rem(50px);
+}
+
+.button--top-margin-xs {
+	margin-top: rem(20px);
+}

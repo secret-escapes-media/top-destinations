@@ -1,0 +1,75 @@
+.section {
+
+	//section height
+	&--full-height {
+		height: 100vh;
+	}
+
+	&--high {
+		height: 70vh;
+	}
+
+	&--medium {
+		height: 50vh;
+	}
+
+	&--small {
+		height: 40vh;
+	}
+
+	&--x-small {
+		height: 20vh;
+	}
+
+	//position
+	&--centered {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 100%;
+	}
+
+//vertical positions
+	&--top {
+		vertical-align:top;
+	}
+	&--middle {
+		vertical-align:middle;
+	}
+	&--bottom {
+		vertical-align:bottom;
+	}
+
+	//position for items setup
+	&__cell {
+		display: table;
+		width: 100%;
+		height: 100%;
+		&--item {
+			display: table-cell;
+		}
+	}
+
+	//color
+	&__color {
+		&--white {
+			background:$color-white;
+		}
+		&--brand {
+			background: $color-brand-primary;
+		}
+	}
+
+	&__asset {
+		&--cover {
+    	background-size: cover;
+    	background-position: center center;
+		}
+	}
+
+	//effects
+	&--box-shadow {
+		 @include box-shadow(0px, 0px, 10px, rgba(0, 0, 0, 0.4));
+	}
+}

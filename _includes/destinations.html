@@ -1,0 +1,20 @@
+<div class="row row-contain section--fatmarg-bottom">
+
+	  <div class="row section--marg-bottom">
+          <div class="small-12 medium-8 medium-push-4 columns match-height">
+            <img srcset="{{ destination.hero-image }}">
+          </div>
+  				<div class="small-12 medium-4 medium-pull-8 columns match-height section--marg-top-mob">
+			        <h2>{{ site.data.destinations[destination.destination-page].destination }}</h2>
+			        <p>{{ site.data.destinations[destination.destination-page].intro-copy }}</p>
+							<a href="{{ destination.url | prepend: site.baseurl }}" class="append-arrow">More details ▶</a>
+          </div>
+    </div>
+
+    <div class="row small-up-1 medium-up-2 large-up-3 feed-container" data-feed="{{ site.data.destinations[destination.destination-page].feed }}" data-limit="3">
+		</div>
+
+		<div class="column row text-style--center">
+			<a href="{{ destination.url | prepend: site.baseurl }}" class="button">See our offers for {{ site.data.destinations[destination.destination-page].destination }}</a>
+		</div>
+</div>

@@ -1,0 +1,31 @@
+
+<div id="map"></div>
+
+<script>
+
+      function initMap() {
+        var place = {lat: {{ site.data.destinations[page.destination-page].lat }}, lng: {{ site.data.destinations[page.destination-page].long }}};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: {{ site.data.destinations[page.destination-page].zoom }},
+          scrollwheel: false,
+          center: place
+        });
+
+        //var place = {lat: {{ site.data.destinations[page.destination-page].lat }}, lng: {{ site.data.destinations[page.destination-page].long }}};
+        var mapPins = {{ site.data.destinations[page.destination-page].mapPins | jsonify}};
+
+        jQuery(function(){
+          $.each(mapPins, function(key, coords) {
+            var marker = new google.maps.Marker({
+              position: { lat: coords.lat, lng: coords.long },
+              map: map
+            });
+          });
+        });
+
+      }
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA--dqF_xOBoHlx8TNOIPkxtfPApm1RXWs&callback=initMap">
+    </script>

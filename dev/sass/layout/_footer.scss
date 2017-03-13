@@ -1,0 +1,10 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+footer {
+	background: $color-ui-footer-bg;
+	text-align: left;
+	p {
+		color: $color-txt-body-light;
+	}
+}

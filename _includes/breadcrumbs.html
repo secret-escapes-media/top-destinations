@@ -1,0 +1,12 @@
+<div class="row row-contain section--marg-bottom">
+  <div class="small-12 columns breadcrumbs">
+      <a href="/">Top Destinations</a> >
+      <a href="{{ destination.url | prepend: site.baseurl }}">
+        {% if page.crumb %}
+          {{ page.crumb }} <span class="text-style--black">></span>
+        {% endif %}
+        {{ page.title }}
+      </a>
+
+  </div>
+</div>

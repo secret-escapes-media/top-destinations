@@ -1,0 +1,23 @@
+.overlay {
+  &__color {
+    &--black {
+      background: $color-black;
+    }
+    &--mostly-black {
+      color: $color-mostly-black;
+    }
+  }
+
+  &__opacity {
+    &--o85 {
+      img {
+        opacity: .85;
+      }
+    }
+    &--o75 {
+      img {
+        opacity: .75;
+      }
+    }
+  }
+}

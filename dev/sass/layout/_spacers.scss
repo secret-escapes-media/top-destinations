@@ -1,0 +1,89 @@
+.spacer {
+  &--padded {
+    padding: rem(80px) 7.5%;
+  }
+  &--padded-lg {
+    padding: rem(100px) 7.5%;
+  }
+  &--side-padded {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+  &--topbot-padded {
+    padding-top: rem(80px);
+    padding-bottom: rem(80px);
+  }
+
+  &--card-padded {
+    padding-left: rem(50px);
+    padding-right: rem(50px);
+  }
+
+  &--card-padded-box {
+    padding: rem(30px);
+
+    // @media screen and (min-width: 40em) {
+  	// 	padding: rem(25px);
+  	// }
+    //
+    // @media screen and (min-width: 64em) {
+  	// 	padding: rem(50px);
+  	// }
+  }
+}
+
+.section {
+
+//padding
+
+
+&--lightbox-padded {
+  padding: rem(75px) 5%;
+}
+
+&--sidepadded {
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+}
+
+&--fatpad {
+  padding-top: rem(150px);
+  padding-bottom: rem(150px);
+}
+
+&--thinpad {
+  padding: rem(30px) 7.5%;
+}
+
+&--fatsidepad {
+  padding-left: rem(84px);
+  padding-right: rem(84px);
+}
+
+&--thinsidepad {
+  padding-left: rem(30px);
+  padding-right: rem(30px);
+}
+
+//margin
+&--fatmarg-top {
+  margin-top: rem(72px);
+}
+
+&--fatmarg-bottom {
+  margin-bottom: rem(80px);
+}
+
+&--marg-bottom {
+  margin-bottom: rem(40px);
+}
+
+&--marg-top {
+  margin-top: rem(40px);
+}
+
+&--marg-top-mob {
+  margin-top: rem(20px);
+}
+
+}

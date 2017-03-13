@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.site-header {
+	background: $color-ui-header-bg;
+	position: relative;
+	z-index: 999;
+
+	.column.row {
+		position: relative;
+		padding-bottom: rem(25px);
+		padding-top: rem(25px);
+
+		@media screen and (min-width: 64em) {
+			height: rem(130px);
+		}
+	}
+}

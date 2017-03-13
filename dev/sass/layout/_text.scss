@@ -1,0 +1,94 @@
+/**
+ * Text alignment for elements. Not necessary just for typography
+ */
+
+.text-style {
+   &--light {
+     color: $color-white;
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6,
+     p {
+       color: $color-white;
+     }
+   }
+
+   &--dark {
+     color: $color-grey-3;
+   }
+
+   &--black {
+     color: $color-mostly-black;
+   }
+
+   &--brand {
+     color: $color-brand-primary;
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6,
+     p {
+       color: $color-brand-primary;
+     }
+   }
+
+   &--shadow {
+     @include text-shadow(0px, 0px, 40px, rgba(0, 0, 0, 0.7));
+   }
+
+   &--center {
+     text-align: center;
+   }
+
+   &--left {
+      text-align: left;
+   }
+
+   &--right {
+      text-align: right;
+   }
+
+   &--bold {
+     font-weight: 600;
+     h1,
+     h2,
+     h3,
+     h4,
+     h5,
+     h6,
+     p {
+       font-weight: 600;
+     }
+   }
+
+    &--strike {
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        border-top: 1px solid $color-grey-1;
+        content:"";
+        margin: 0 auto;
+        position: absolute;
+        top: 50%; left: 0; right: 0; bottom: 0;
+        width: 95%;
+        z-index: -1;
+      }
+
+      span {
+        background: $color-ui-bg;
+        padding: 0 15px;
+      }
+    }
+
+    &--ellipsis {
+      &:after {
+        content: '...';
+      }
+    }
+}

@@ -1,0 +1,15 @@
+{% if page.url == "/" %}
+	<section class="section--medium section__asset--cover" style="background-image:url('{{ page.hero-image }}')">
+{% else %}
+	<section class="section--small section__asset--cover" style="background-image:url('{{ page.hero-image }}')">
+{% endif %}
+		<div class="section__cell">
+				<div class="section__cell--item section--middle text-style--center">
+					<div class="row">
+						<div class="small-12 small-centered medium-10 columns text-style--light text-style--shadow">
+							<h1>{{ page.title }}</h1>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>

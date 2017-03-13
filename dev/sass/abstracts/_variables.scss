@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: "soleil", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$text-se-font-stack: "soleil", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$heading-font-stack: "soleil", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Length} values - Values are actual breakpoints expressed in pixels
+/// @see {mixin} respond-to
+$breakpoints: (
+  small: 30em,
+  medium: 40em,
+  large: 64em,
+  xlarge: 86em
+);
+$breakpoints-max: (
+  small: map-get($breakpoints, small) - 0.0625,
+  medium: map-get($breakpoints, medium) - 0.0625,
+  large: map-get($breakpoints, large) - 0.0625,
+  xlarge: map-get($breakpoints, xlarge) - 0.0625
+);
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/app/' !default;
+
+
+
+
+
+
+/// CSS Easing Functions
+/// @type String
+$ease-in-out-circ: cubic-bezier(0.72, 0.01, 0.13, 0.98);
+
+
+
+
+/// Common SVG shape data URIs
+/// Save the full SVG code only in variables. Can be used for simple or
+/// complicated SVGs, but probably more useful for simple ones.
+/// For colourless (black) SVG icons, remove the fill color hex code
+/// but don't remove the rule or the semicolon after –
+/// e.g. <style type="text/css">.st0{fill:#FFFFFF;}</style> becomes
+/// <style type="text/css">.st0{fill:;}</style>.
+/// If your SVG doesn't have a style attribute, you can generate them
+/// everywhere they need to be by opening it in illustrator and changing
+/// the color to white.
+/// If you aren't going to be changing the color of the SVG with CSS
+/// or the SVG has multiple colors you can skip this step and leave
+/// the code as it is.
+///
+/// @type String
+/// @see {function} svg-url
+$svg-arrow-right: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 62.9 75.7" style="enable-background:new 0 0 62.9 75.7;" xml:space="preserve"><style type="text/css">.st0{fill:;}</style><polygon class="st0" points="0,0 62.9,37.9 0,75.7 "/></svg>';
+$svg-arrow-down: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 75.7 62.9" style="enable-background:new 0 0 75.7 62.9;" xml:space="preserve"><style type="text/css">.st0{fill:;}</style><polygon class="st0" points="75.7,0 37.9,62.9 0,0 "/></svg>';
+$svg-arrow-up: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 75.7 62.9" style="enable-background:new 0 0 75.7 62.9;" xml:space="preserve"><style type="text/css">.st0{fill:;}</style><polygon class="st0" points="0,62.9 37.9,0 75.7,62.9 "/></svg>';
+$svg-arrow-left: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 62.9 75.7" style="enable-background:new 0 0 62.9 75.7;" xml:space="preserve"><style type="text/css">.st0{fill:;}</style><polygon class="st0" points="62.9,75.7 0,37.9 62.9,0 "/></svg>';
+
+$svg-chevron-down: '<svg width="24px" height="21px" viewBox="482 572 24 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="down--icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(483.000000, 573.000000)" stroke-linecap="round" stroke-linejoin="round"><polyline id="Stroke-1" stroke="#FFFFFF" points="21.835 8.05455435 11.0213774 18.81475 0.207339623 8.05455435"></polyline><polyline id="Stroke-3" stroke="#FFFFFF" stroke-width="0.945" points="19 0 11.0001535 8 3 0"></polyline></g></svg>';
+
+
+/// Site Specific SVG shape data URIs
+///
+/// @type String
+/// @see {function} svg-url

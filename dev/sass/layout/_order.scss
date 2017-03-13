@@ -1,0 +1,10 @@
+.order {
+  position: relative;
+  &--top {
+    z-index: 2;
+    position: absolute;
+  }
+  &--bottom {
+    z-index: 0;
+  }
+}

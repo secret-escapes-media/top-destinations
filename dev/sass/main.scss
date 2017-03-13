@@ -1,0 +1,72 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+//    Mixins, Functions, Variables. Nothing in abstracts should
+//    generate actual CSS rules, these files are just for things
+//    that are used in other SCSS files.
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/colors',
+  'abstracts/mixins';
+
+// 2. Vendors
+//    Any 3rd party stylesheets, e.g. Foundation, plugin CSS,
+//    normalising styles, libraries. Overrides to third party
+//    css also goes in here, so Foundation overrides would go
+//    in a file named '_foundation_overrides.scss'.
+@import
+  'vendor/normalize',
+  'vendor/foundation',
+  'vendor/foundation-overrides',
+  'vendor/slick',
+  'vendor/slick-theme';
+
+
+// 3. Base stuff
+//    'Boilerplate' sitewide styles for the projects. Set all
+//    default styles for elements e.g. lists, forms, typography,
+//    fonts, headings, blockquotes – everything. Helper classes
+//    like clearing classes also go in here.
+
+@import
+  'base/base',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout-related sections
+//    Similar to components but for sections which are more integral
+//    to the layout of the site. Header, footer, sidebar, navigation –
+//    basically any large, site-wide components. Most sites will not
+//    have much more than header, footer and navigation.
+@import
+  'layout/header',
+  'layout/navigation',
+  'layout/sections',
+  'layout/spacers',
+  'layout/text',
+  'layout/order',
+  'layout/footer';
+
+// 5. Components
+//    A new file for each widget/component, e.g. '_hero.scss' could
+//    house all styles for hero images or sections. Buttons, sliders,
+//    loaders, filters – any single page element. This folder will
+//    usually end up with the most files.
+@import
+  'components/button',
+  'components/heroes',
+  'components/logos',
+  'components/icons',
+  'components/overlay',
+  'components/map',
+  'components/breadcrumbs',
+  'components/tiles';
+
+// 6. Page-specific styles
+//    Pretty self explanatory – any styles that apply to a single page
+//    ONLY go in a file named after that page. Overriding any base, layout
+//    or component styles for a single page only? Create a file for that
+//    page in here. Styling a slider that only appears on one page? Create
+//    a component file for it instead.
+//@import;

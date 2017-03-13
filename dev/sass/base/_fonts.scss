@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+@font-face {
+    font-family: 'volvo_broad';
+    src: url('../fonts/volvobroad-webfont.woff2') format('woff2'),
+         url('../fonts/volvobroad-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'volvo_sans_pro';
+    src: url('../fonts/volvosanspro-medium-webfont.woff2') format('woff2'),
+         url('../fonts/volvosanspro-medium-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'volvo_sans_pro';
+    src: url('../fonts/volvosanspro-regular-webfont.woff2') format('woff2'),
+         url('../fonts/volvosanspro-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'volvo_sans_pro';
+    src: url('../fonts/volvosanspro-bold-webfont.woff2') format('woff2'),
+         url('../fonts/volvosanspro-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}

@@ -1,0 +1,13 @@
+
+
+.hero.hero__gradient--black:before {
+content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .55;
+    height: 65%;
+    background: linear-gradient(180deg,transparent,#000);
+  }
+  

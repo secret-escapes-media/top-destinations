@@ -1,0 +1,38 @@
+
+  <div class="column">
+    <a href="{{ site.data.destinations[page.destination-page].article-link-1 }}">
+      <div class="tile tile__container">
+        <div class="tile__image-article" style="background:url('{{ site.data.destinations[page.destination-page].article-image-1 }}'); background-size:cover; height:300px;">
+
+        </div>
+        <div class="tile__content spacer--card-padded-box">
+          <h3>{{ site.data.destinations[page.destination-page].article-title-1 }}</h3>
+          <h5>{{ site.data.destinations[page.destination-page].article-categories-1 }}</h5>
+          <p class="text-style--ellipsis">
+            {{ site.data.destinations[page.destination-page].article-intro-1 }}
+          </p>
+          <a href="{{ site.data.destinations[page.destination-page].article-link-1 }}" class="icon--small">Read more <span>▶</span></a>
+        </div>
+      </div>
+    </a>
+  </div>
+{% if site.data.destinations[page.destination-page].article-title-2 == '' %}
+{% else %}
+  <div class="column">
+    <a href="{{ site.data.destinations[page.destination-page].article-link-2 }}">
+      <div class="tile tile__container">
+        <div class="tile__image-article" style="background:url('{{ site.data.destinations[page.destination-page].article-image-2 }}'); background-size:cover; height:300px;">
+
+        </div>
+        <div class="tile__content spacer--card-padded-box">
+          <h3>{{ site.data.destinations[page.destination-page].article-title-2 }}</h3>
+          <h5>{{ site.data.destinations[page.destination-page].article-categories-2 }}</h5>
+          <p class="text-style--ellipsis">
+            {{ site.data.destinations[page.destination-page].article-intro-2 }}
+          </p>
+          <a href="{{ site.data.destinations[page.destination-page].article-link-1 }}" class="icon--small">Read more <span>▶</span></a>
+        </div>
+      </div>
+    </a>
+  </div>
+{% endif %}

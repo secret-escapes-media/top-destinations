@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+{% include hero.html %}
+
+<section class="spacer--padded">
+  {% include breadcrumbs.html %}
+  <div class="row row-contain">
+    <div class="small-12 medium-6 columns">
+				<p class="intro-copy">{{ site.data.destinations[page.destination-page].intro-copy }}</p>
+		</div>
+    <div class="small-12 medium-6 columns">
+      {% include map.html %}
+    </div>
+	</div>
+</section>
+
+{% if site.data.destinations[page.destination-page].article-title-1 == '' %}
+{% else %}
+<section>
+  <div class="row row-contain">
+    <h4 class="text-style--strike text-style--center"><span>Featured articles</span></h4>
+  </div>
+  <div class="row row-contain small-up-1 medium-up-2">
+      {% include articles.html %}
+	</div>
+</section>
+{% endif %}
+
+<section>
+  <div class="row row-contain">
+    <h4 class="text-style--strike text-style--center"><span>Our {{ page.title }} offers</span></h4>
+  </div>
+	<div class="row row-contain small-up-1 medium-up-2 feed-container" data-feed="{{ site.data.destinations[page.destination-page].feed }}">
+
+	</div>
+</section>
